@@ -62,7 +62,6 @@ namespace AdventOfCode2021
             var ogList = _binaries.ToList();
             var scrubList = _binaries.ToList();
             var counts = new int[_length];
-            Console.WriteLine(ogList.Count());
             var mostCommonFirstBit = 1;
             for (int i = 0; i < _length; i++)
             {
@@ -75,7 +74,6 @@ namespace AdventOfCode2021
                 }
                 decimal half = Convert.ToDecimal(ogList.Count())/2;
                 mostCommonFirstBit = counts[i] >= half ? 1 : 0;
-                Console.WriteLine(mostCommonFirstBit);
                 ogList = ogList.Where(b => b[i].ToString() == mostCommonFirstBit.ToString()).ToList();
                 if(ogList.Count() == 1)
                 {
@@ -102,9 +100,6 @@ namespace AdventOfCode2021
                     break;
                 }
             }
-            System.Console.WriteLine($"{ogList.Single()} = {Convert.ToInt32(ogList.Single(),2)}");
-            System.Console.WriteLine($"{scrubList.Single()} = {Convert.ToInt32(scrubList.Single(),2)}");
-            
 
             return Convert.ToInt32(ogList.Single(),2) * Convert.ToInt32(scrubList.Single(),2);
         }
