@@ -16,6 +16,7 @@ namespace AdventOfCode.Tests.Day2
             var res = sut.Part2();
             Assert.Equal(8, res);
         }
+        [Fact]
         public void DownTwiceAndForwardTwiceUpOnceForwardOnceShouldReturn8()
         {
             var input = 
