@@ -89,14 +89,12 @@ namespace AdventOfCode2021
         public int Part1(){
             var winner = _bingo.PlayToFirstWin();
             var nonMarkedNumbers = winner.Rows.SelectMany(x => x).ToList().Where(n => !winner.MarkedNumbers.Contains(n));
-            Console.WriteLine(nonMarkedNumbers.Sum());
             return nonMarkedNumbers.Sum() * _bingo.LastCall;
         }
 
         public int Part2(){
             var winner = _bingo.PlayToLastWin();
             var nonMarkedNumbers = winner.Rows.SelectMany(x => x).ToList().Where(n => !winner.MarkedNumbers.Contains(n));
-            Console.WriteLine(nonMarkedNumbers.Sum());
             return nonMarkedNumbers.Sum() * winner.MarkedNumbers.Last();
         }
     }
