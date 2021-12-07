@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/src/AdventOfCode/bin/Debug/netcoreapp3.1/AdventOfCode2021.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/AdventOfCode",
+            "cwd": "${workspaceFolder}/",
             "console": "internalConsole",
             "stopAtEntry": false
         },
