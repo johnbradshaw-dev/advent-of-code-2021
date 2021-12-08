@@ -19,13 +19,12 @@ namespace AdventOfCode2021
                 costs.Add(Inputs.Select(input => costCalculation(input,i)).Sum());
             }
             var bestPos = costs.IndexOf(costs.Min());
-            Console.WriteLine($"The best position is {costs.IndexOf(costs.Min())} it costs {costs.Min()}");
             return costs.Min();
         }
         public int Part1() => _calculateCheapest((input, position) => Math.Abs(position - input));
         public long Part2() => _calculateCheapest((input, position) => {
-                        var n = Math.Abs(position - input);
-                        return (n * (n + 1))/2;
+                    var n = Math.Abs(position - input);
+                    return (n * (n + 1))/2;
                     });
     }
 }

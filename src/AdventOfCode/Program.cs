@@ -11,8 +11,8 @@ namespace AdventOfCode2021
 
         static async Task Work(){
             var getInput = new GetInput();
-            var input = await getInput.GetInputAsString(7);
-            var challenge = new Day7(input);
+            var input = await getInput.GetInputAsString(8);
+            var challenge = new Day8(input);
             var res = challenge.Part2();
             System.Console.WriteLine(res);
         } 
