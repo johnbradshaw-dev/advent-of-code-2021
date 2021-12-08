@@ -33,11 +33,16 @@ namespace AdventOfCode2021
             dict.Add(4,input.First(i => i.Length == 4));
             dict.Add(8,input.First(i => i.Length == 7));
             dict.Add(9, input.First(i => i.Length == 6 && dict[4].All(i.Contains)));
-            dict.Add(6, input.First(i => i.Length == 6 && !dict[4].All(i.Contains) && !dict[7].All(i.Contains)));
-            dict.Add(0, input.First(i => i.Length == 6 && dict[6].Count(i.Contains) == 5 && dict[9].Count(i.Contains) == 5 ));
+            dict.Add(6, input.First(i => i.Length == 6 && !dict[4].All(i.Contains) 
+                                                       && !dict[7].All(i.Contains)));
+            dict.Add(0, input.First(i => i.Length == 6 && dict[6].Count(i.Contains) == 5 
+                                                       && dict[9].Count(i.Contains) == 5 ));
             dict.Add(5, input.First(i => i.Length == 5 && dict[6].Count(i.Contains) == 5));
             dict.Add(3, input.First(i => i.Length == 5 && i.All(dict[9].Contains) && !i.All(dict[5].Contains)));
-            dict.Add(2, input.First(i => i.Length == 5 && !dict[6].All(i.Contains) && !dict[9].All(i.Contains) && !i.All(dict[5].Contains) && !i.All(dict[3].Contains)));
+            dict.Add(2, input.First(i => i.Length == 5 && !dict[6].All(i.Contains) 
+                                                       && !dict[9].All(i.Contains) 
+                                                       && !i.All(dict[5].Contains) 
+                                                       && !i.All(dict[3].Contains)));
             return dict;
         }
     }
