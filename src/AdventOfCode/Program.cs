@@ -6,15 +6,12 @@ namespace AdventOfCode2021
     {
         static void Main(string[] args)
         {   
-            Work().ConfigureAwait(false).GetAwaiter().GetResult();
+           var getInput = new GetInput();
+            var input = getInput.GetInputAsString(9);
+            var challenge = new Day9(input);
+            var res = challenge.Part1();
+            System.Console.WriteLine(res);
         }
 
-        static async Task Work(){
-            var getInput = new GetInput();
-            var input = await getInput.GetInputAsString(8);
-            var challenge = new Day8(input);
-            var res = challenge.Part2();
-            System.Console.WriteLine(res);
-        } 
     }
 }

@@ -10,7 +10,7 @@ namespace AdventOfCode2021
         {
         }
 
-        public async Task<string> GetInputAsString(int dayNumber){
+        public string GetInputAsString(int dayNumber){
             string path = $@"data/{dayNumber}.txt";
 
         // This text is added only once to the file.
@@ -19,7 +19,7 @@ namespace AdventOfCode2021
             throw new FileNotFoundException("Input file not found", path);
         }
 
-        string readText = await File.ReadAllTextAsync(path);
+        string readText = File.ReadAllText(path);
         return readText;
         }
     }
